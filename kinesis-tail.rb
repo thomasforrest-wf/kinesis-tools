@@ -22,6 +22,7 @@ while true
 
     iterators[shard[:shard_id]] = response[:next_shard_iterator]
     response[:records].each do |record|
+      puts "Data to #{shard[:shard_id]}"
       puts record[:data]
     end
   end
